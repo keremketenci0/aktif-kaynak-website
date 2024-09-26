@@ -1,0 +1,16 @@
+{
+  "Navbar": {
+    "Link": {
+      "home": "Home",
+      "products": "Products",
+      "about": "About",
+      "contact": "Contact"
+    }
+  },
+  "Page": {
+    "Home": {
+      "title": "Welcome to Aktif Kaynak",
+      "about": "aktifkaynakabout"
+    }
+  }
+}

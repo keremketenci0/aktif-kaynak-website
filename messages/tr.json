@@ -1,0 +1,16 @@
+{
+  "Navbar": {
+    "Link": {
+      "home": "Anasayfa",
+      "products": "Ürünler",
+      "about": "Hakkımızda",
+      "contact": "İletişim"
+    }
+  },
+  "Page": {
+    "Home": {
+      "title": "Aktif Kaynak'a Hoşgeldiniz",
+      "about": "aktifkaynakabout"
+    }
+  }
+}

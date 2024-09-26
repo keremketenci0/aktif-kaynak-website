@@ -1,0 +1,12 @@
+{
+    "icons": [
+        {
+            "name": "tr",
+            "path": "/icons/languages/tr.svg"
+        },
+        {
+            "name": "en",
+            "path": "/icons/languages/en.svg"
+        }
+    ]
+}
