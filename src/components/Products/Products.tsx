@@ -1,14 +1,29 @@
-import { ProductsCard } from '@/components/Products/ProductsCard';
-import { ProductsFilter } from '@/components/Products/ProductsFilter';
-import { ProductsCategory } from '@/components/Products/ProductsCategory';
-import { NavBreadcrumb } from '../NavBreadcrumb';
+import { Product } from "@/app/[locale]/products/columns"
+import React from "react";
+import { ProductsCategory } from "@/components/Products/ProductsCategory";
+import ProductsList from "@/components/Products/ProductsList";
 
-export default function Products() {
-  const products = Array.from({ length: 20 }, (_, index) => ({
-    title: `Product ${index + 1}`,
-    description: `Description for product ${index + 1}`,
-    contentImage: `/images/1.jpeg`
-  }));
+// Move the data fetching here (server-side)
+async function getData(): Promise<Product[]> {
+  const product: Product[] = [];
+
+  for (let i = 0; i < 100; i++) {
+    product.push({
+      id: "728ed52f",
+      amount: 100,
+      status: "pending",
+      email: "m@example.com",
+      title: "title",
+      description: "desc",
+      contentImage: "/images/1.jpeg"
+    });
+  }
+
+  return product;
+}
+
+export default async function ProductsTable() {
+  const data = await getData();
 
   return (
     <div className="flex flex-col">
@@ -17,24 +32,10 @@ export default function Products() {
           <ProductsCategory />
         </div>
 
-        <div className="flex flex-col w-full">
-          <div className="py-4">
-            <ProductsFilter />
-          </div>
-          <div className="flex flex-wrap gap-4">
-            {products.map((product, index) => (
-              <div>
-                <ProductsCard
-                  key={index}
-                  title={product.title}
-                  description={product.description}
-                  contentImage={product.contentImage}
-                />
-              </div>
-            ))}
-          </div>
+        <div className="w-full mx-auto">
+          <ProductsList data={data} />
         </div>
       </div>
     </div>
-  );
+  )
 }

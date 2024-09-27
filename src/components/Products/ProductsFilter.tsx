@@ -15,7 +15,7 @@ import {
 
 export function ProductsFilter() {
     return (
-        <div className="flex flex-row justify-between space-x-2">
+        <div className="flex flex-row justify-between space-x-4 ">
             <Input placeholder="Product Name" />
             <div>
                 <Select>

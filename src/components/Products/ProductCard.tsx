@@ -17,7 +17,7 @@ interface ProductsCardProps {
   footer?: string;
 }
 
-export function ProductsCard({
+export function ProductCard({
   title,
   titleClass,
   description,
