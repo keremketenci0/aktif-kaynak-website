@@ -7,7 +7,7 @@
 
 ## Installation
 ```
-git clone https://github.com/keremketenci0/aktif-kaynak-website.git
+git clone https://github.com/keremketenci/aktif-kaynak-website.git
 cd aktif-kaynak-website
 
 pnpm install
